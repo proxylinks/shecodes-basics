@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Kiddies</title>
+    <style>
+      a {
+        text-align: center;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      body {
+        background: radial-gradient(
+          circle at 11.7% 80.6%,
+          rgb(249, 185, 255) 0%,
+          rgb(177, 172, 255) 49.3%,
+          rgb(98, 203, 255) 89%
+        );
+        margin: 0;
+      }
+
+      button {
+        margin: 20px auto;
+        display: block;
+        padding: 10px 25px;
+        font-size: 18px;
+        border-radius: 5px;
+        border-style: none;
+        color: white;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+        background-color: #62cbff;
+        cursor: pointer;
+        transition: all 250ms ease-in-out;
+      }
+
+      button:hover {
+        color: #62cbff;
+        background-color: rgb(236, 234, 234);
+      }
+
+      footer {
+        font-family: monospace;
+        text-align: center;
+        font-size: 16px;
+      }
+      h1 {
+        text-align: center;
+        border-radius: 5px;
+        line-height: 2;
+        margin: 0;
+      }
+
+      h2 {
+        text-align: center;
+        line-height: normal;
+        color: #62cbff;
+      }
+
+      header {
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        margin: 0;
+      }
+
+      img {
+        display: block;
+        margin: 50px auto;
+        border-radius: 10px;
+        border: 1px solid #62cbff;
+        width: 300px;
+        padding: 5px;
+        transition: transform 0.5s ease;
+      }
+
+      img:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+
+      p {
+        text-align: justify;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .container {
+        background-color: white;
+        padding: 30px;
+        margin: 0px 20% 30px 20%;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Tech Kiddies</h1>
+    </header>
+    <div class="container">
+      <br /><br />
+      <h2><em>...where we teach kids how to code</em></h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/023/original/girl_coding.jpg?1685623245"
+        alt="girl coding"
+      />
+      <p>
+        Learning to code opens your child to the amazing world of technology.
+        This time not as a consumer but as a creator. Have you noticed that
+        those who create technology control the world? Take a look at Facebook,
+        Microsoft, Amazon, Twitter etc., all are mobile apps that have turned
+        into billion dollar companies and their creators, Mark Zuckerberg, Bill
+        Gates, Jeff Bezos, and Jack Dorsey all learnt how to code before they
+        turned 15.
+      </p>
+      <a
+        href="https://www.9jacodekids.com/summer-online-code-camp/"
+        target="_blank"
+        >Click here to learn more</a
+      >
+      <button>Apply Now</button>
+      <footer>This Page was coded by Sholabomi Adekunle</footer>
+    </div>
+    <script>
+      function userApply() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        let email = prompt("Please, enter your email address");
+
+        let message = document.querySelector("h2");
+
+        if (age >= 18) {
+          message.innerHTML = `Sorry 😔😔😔 ${name}! You are not eligible to apply for this class`;
+        } else {
+          message.innerHTML = `Hi 🖐🏽🖐🏽🖐🏽 ${name}! You are welcome to Tech Kiddies. We will get reach you via this email ${email}`;
+        }
+      }
+      let applyButton = document.querySelector("button");
+      applyButton.addEventListener("click", userApply);
+    </script>
+  </body>
+</html>
